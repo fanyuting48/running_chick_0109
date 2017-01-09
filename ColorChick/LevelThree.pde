@@ -60,9 +60,6 @@ void levelThreeDraw(){
   //colorBall
   for(int i=0;i<onField;i++){
     colorBall[i].display();
-    for(int j=0;j<attackNum;j++){
-      colorBall[i].OnCollision(attackBall[j]);
-    }
   }
   
 

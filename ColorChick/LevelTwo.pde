@@ -1,7 +1,7 @@
 void levelTwoSet(){
   attackNum = 3;
-  speed = 4;
-  float speedY = random(1,3);
+  float speed = random(1,5);
+  float speedY = random(-1,5);
   initLevel(8,4,4,pink);
   
   //player
@@ -9,7 +9,7 @@ void levelTwoSet(){
   
   //attackBall
   attackBall[0] = new AttackBall(350,190,ATTACK_SIZE,speed,speedY);
-  attackBall[1] = new AttackBall(250,120,ATTACK_SIZE,speed,speedY);
+  attackBall[1] = new AttackBall(100,200,ATTACK_SIZE,speed,speedY);
   attackBall[2] = new AttackBall(355,120,ATTACK_SIZE,speed,speedY);
   
   //colorBall
