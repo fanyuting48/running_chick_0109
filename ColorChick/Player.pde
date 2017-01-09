@@ -100,13 +100,7 @@ class Player{
     b = (b+target.b)/2;
   }
   
-  boolean goToNextLevel(Level level){
-    if(x>600 && r == level.r && g == level.g && b == level.b){
-      return true;
-    }else{
-      return false;
-    }
-  }
+
   
   int playerTouch = 120;
   
