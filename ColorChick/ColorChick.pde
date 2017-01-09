@@ -7,7 +7,8 @@ int openingCount=300;
 int movieCount=120;
 
 
-PImage main;
+PImage main1;
+PImage main2;
 PImage startPress1;
 PImage startPress2;
 
@@ -113,7 +114,8 @@ void setup(){
   endMovie = new Movie(this,"newEnd.mov");
   
   //image set
-  main = loadImage("img/Cover.png");
+  main1 = loadImage("img/Cover1.png");
+  main2 = loadImage("img/Cover2.png");
   startPress1 = loadImage("img/pressStart1.png");
   startPress2 = loadImage("img/pressStart2.png");
   
@@ -140,9 +142,11 @@ void draw(){
   switch(levelState){
   //main game
   case LEVEL_OPENING:
-  image(main,0,0,640,480);
+  image(main1,0,0,640,480);
+  if(mouseX>320-80 && mouseX<320+80 && mouseY>400 && mouseY<450){
+    image(main2,-1,0,640,480);
   if(mousePressed){
-    levelState=LEVEL_STORY_MOVIE;}
+    levelState=LEVEL_STORY_MOVIE;}}
   
   break;
   
