@@ -153,7 +153,7 @@ void draw(){
   if( openingCount== 300){openingCount --;}
   if(openingCount <300){openingCount --;}
   if(openingCount<0){
-     if(mouseX>270 &&mouseX<370 && mouseY>190 &&mouseY <290){
+     if(mouseX>270 &&mouseX<370 && mouseY>190 &&mouseY <290 && mousePressed){
        openingCount = 300; 
        levelState = GAME_PRESS_START;
     }
@@ -164,7 +164,7 @@ void draw(){
   //press to start img
   case GAME_PRESS_START:
   image(startPress2,0,0,640,480);
-      if(mouseX>350 &&mouseX<460 && mouseY>240 &&mouseY <280){
+      if(mouseX>350 &&mouseX<460 && mouseY>240 &&mouseY <280 && mousePressed){
         image(startPress1,0,0,640,480);
           if(mousePressed)levelState =LEVEL_RED;
         }
