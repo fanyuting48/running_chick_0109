@@ -30,7 +30,7 @@ public int [][] colorTable = { {254,254,254}, {254,0,50},{254,127,152},
                                {254,246,154},{242,158,194},{248,202,174},
                                {248,202,174},{251,224,164},{0,204,254},
                                {127,225,204},{52,102,254},{153,178,254},
-                               {147,130,224},{149,144,146},{0,0,0},
+                               {147,130,224},{190,190,190},{106,106,106},
                               };
                               
 //index of the color
@@ -60,6 +60,18 @@ boolean correctcolor(){
           return false;
         }
     }
+    
+boolean restart(){
+  if(colorIndex == totalBall){
+    if(mouseX>20 && mouseX<70 && mouseY>380 && mouseY<410 && mousePressed){
+      return true;
+    }else{
+      return false;
+    }
+  }
+  return false;
+}
+
 //levelState
 int levelState;
 final int LEVEL_OPENING=0;
@@ -101,7 +113,7 @@ void setup(){
   endMovie = new Movie(this,"newEnd.mov");
   
   //image set
-  main = loadImage("img/Cover.jpg");
+  main = loadImage("img/Cover.png");
   startPress1 = loadImage("img/pressStart1.png");
   startPress2 = loadImage("img/pressStart2.png");
   
@@ -114,7 +126,7 @@ void setup(){
   //player set
   player= new Player(white);
   player.x= 50;
-  player.y= 240;  
+  player.y= 240;
   levelOneSet();
   
 }
@@ -175,6 +187,9 @@ void draw(){
       player.y=240;
       levelState=LEVEL_RED_MOVIE;
       }
+   if(restart()){
+     levelOneSet();
+   }
   break;
   
   case LEVEL_RED_MOVIE:
@@ -197,6 +212,9 @@ void draw(){
       player.y=240;
       levelState=LEVEL_ORANGE_MOVIE;
       }
+   if(restart()){
+     levelTwoSet();
+   }
   break;
   
   case LEVEL_ORANGE_MOVIE:
@@ -218,7 +236,10 @@ void draw(){
       player.x=50;
       player.y=240;
       levelState=LEVEL_YELLOW_MOVIE;
-      }      
+      }     
+   if(restart()){
+     levelThreeSet();
+   }
   break;
   
   case LEVEL_YELLOW_MOVIE:
@@ -241,6 +262,9 @@ void draw(){
       player.y=240;
       levelState=LEVEL_GREEN_MOVIE;
       } 
+   if(restart()){
+     levelFourSet();
+   }
   break;
   
   case LEVEL_GREEN_MOVIE:
@@ -261,6 +285,9 @@ void draw(){
       player.y=240;
       levelState=LEVEL_BLUE_MOVIE;
       } 
+   if(restart()){
+     levelFiveSet();
+   }
   break;
   
   case LEVEL_BLUE_MOVIE:
@@ -278,6 +305,9 @@ void draw(){
    if(correctcolor()==true){
       levelState=LEVEL_PURPLE_MOVIE;
       } 
+   if(restart()){
+     levelSixSet();
+   }
   break;
   
   case LEVEL_PURPLE_MOVIE:

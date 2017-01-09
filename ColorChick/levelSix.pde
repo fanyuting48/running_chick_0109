@@ -35,9 +35,9 @@ void levelSixDraw(){
   for(int i=0;i<blockNum;i++){
     player.OnCollision(blockBall[i]);
   }
-  for(int i=0;i<onField;i++){
-    player.OnCollision(colorBall[i]);
-  }
+  //for(int i=0;i<onField;i++){
+  //  player.OnCollision(colorBall[i]);
+  //}
   
   //blockBall
   for(int i=0;i<blockNum;i++){
@@ -48,6 +48,7 @@ void levelSixDraw(){
     //colorBall
   for(int i=0;i<onField;i++){
     colorBall[i].display();
+    player.OnCollision(colorBall[i]);
     for(int j=0;j<attackNum;j++){
       colorBall[i].OnCollision(attackBall[j]);
     }
