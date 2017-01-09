@@ -1,6 +1,6 @@
 void levelFourSet(){
   attackNum = 3;
-  initLevel(10,3,4,yellow3);
+  initLevel(10,3,4,yellow);
   
   //player
   player = new Player(blue);
