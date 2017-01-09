@@ -98,7 +98,7 @@ void setup(){
   blueMovie = new Movie(this, "Blue.mp4");
   purpleMovie = new Movie(this, "Purple.mp4");
   intoBall = new Movie(this,"ChickenIntoBall.mp4");
-  endMovie = new Movie(this,"End.mp4");
+  endMovie = new Movie(this,"newEnd.mov");
   
   //image set
   main = loadImage("img/Cover.jpg");

@@ -12,10 +12,10 @@ class Level{
     b = colorTable[colorIndex][2];
     
     //bg
-    if(colorIndex == blue3){
+    if(colorIndex == blue3 || colorIndex == yellow3){
       background(r+50,g+50,b+50);
-    }else{
-      background(r+100,g+100,b+100);
+      }else{
+        background(r+100,g+100,b+100);
     }
     fill(r,g,b);
     
