@@ -38,8 +38,18 @@ class Level{
     
     //wash ball
     stroke(205);
-    strokeWeight(3);
-    noFill();
-    ellipse(50,240,35,35);
+    strokeWeight(2);
+    if(mouseX>20 && mouseX<70 && mouseY>380 && mouseY<410){
+      fill(r+50,g+50,b+50);
+        }else{
+          noFill();
+          }
+          
+    rect(20,380,50,30);
+    fill(100);
+    textSize(10);
+    text("RESTART",25,400);
+    
+    
   }
 }

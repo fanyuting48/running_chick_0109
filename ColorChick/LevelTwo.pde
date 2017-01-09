@@ -6,6 +6,8 @@ void levelTwoSet(){
   
   //player
   player = new Player(yellow);
+  player.x=50;
+  player.y=240;
   
   //attackBall
   attackBall[0] = new AttackBall(350,190,ATTACK_SIZE,speed,speedY);
@@ -20,6 +22,7 @@ void levelTwoSet(){
   for(int i=0;i<onField;i++){
     colorBall[i].fillTheColor(ballIndexList[i]);
   }
+
 }
 
 void levelTwoDraw(){
@@ -50,5 +53,6 @@ void levelTwoDraw(){
       colorBall[i].OnCollision(attackBall[j]);
     }
   }
+
   
 }
